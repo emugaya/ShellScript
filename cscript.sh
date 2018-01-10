@@ -41,20 +41,30 @@ touch "__init__.py"
 touch "auth.py"
 touch "bucketlist.py"
 touch "items.py"
+while read line; do
+echo This file: $line;
+done <<EOF
+$(ls)
+EOF
 cd ".."
 cd ".."
 cd "tests"
 touch "__init__.py"
 touch "test_auth.py"
-touch "test_bucketlists.py"
-touch "test_items.py"
-cd ..
-echo "Saving folder structure to $MAIN_FOLDER_structure.txt \n"
+cp test_auth.py test_bucketlists.py
+cp test_auth.py test_items.py
+cd ".."
+echo "Listing folders"
+ls -l
+echo "Saving folder structure to ${MAIN_FOLDER}_structure.txt \n"
 echo "${MAIN_FOLDER} folder structure\n"
 tree >> "${MAIN_FOLDER}_structure.txt"
 cat "${MAIN_FOLDER}_structure.txt"
-
+echo "Showing Disk Usage for all files in the folder created"
+du | sort -nr | head
 cd ".."
 echo "Deleting Folder"
 rm -rf ${MAIN_FOLDER}
+echo "Showing Terminal Process"
+ps aux | grep terminal
 echo "**********************Good Bye!**********************"

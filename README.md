@@ -8,7 +8,7 @@ This can be used to learn how to write a basic shell script.
 
 ## How to install and run the script
 1. Make sure that your environment meets the above requirements
-2. Open you terminal clone this repo
+2. Open you terminal and clone this repo
 
 ```git clone https://github.com/emugaya/ShellScript.git```
 
