@@ -1,3 +1,3 @@
-# Shell Script
-Shell script that creates basic application folder structure and files
+# Bash Script
+Bash script that creates basic application folder structure and files
 
